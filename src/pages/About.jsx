@@ -13,7 +13,9 @@ export default function About() {
     <>
       <section className="wrap py-16 lg:py-24 grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-20 items-end">
         <div>
-          <h1 className="text-5xl lg:text-7xl">A small London company with two crafts.</h1>
+          <p className="kicker">About {COMPANY.legalName}</p>
+          <h1 className="mt-4 text-5xl lg:text-7xl">{COMPANY.legalName}: a small London company with two crafts.</h1>
+          <p className="mt-5 text-smoke">Private limited company registered in England and Wales{COMPANY.number ? `, company number ${COMPANY.number}` : ''}.</p>
         </div>
         <p className="text-lg text-moss leading-relaxed">
           {COMPANY.legalName} sells home and living goods online and provides IT consultancy to small businesses. Both come from the same place: a belief that the things you use every day should be chosen carefully and work properly.
