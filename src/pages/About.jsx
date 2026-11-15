@@ -67,6 +67,7 @@ export default function About() {
               ['Registered name', COMPANY.legalName],
               ['Company type', 'Private limited company, registered in England and Wales'],
               ...(COMPANY.number ? [['Company number', COMPANY.number]] : []),
+              ['Incorporated', `${COMPANY.incorporated}, Companies House`],
               ['Registered office', COMPANY.address],
               ['Activities', 'Online retail of home and living goods; information technology consultancy'],
               ['Email', COMPANY.email],

@@ -3,7 +3,8 @@
 export const COMPANY = {
   brand: 'North Ember',
   legalName: 'North Ember Ltd',
-  number: '',
+  number: '17580441',
+  incorporated: '13 November 2026',
   addressLines: ['Office 2261', '60 Tottenham Court Road', 'Fitzrovia, London', 'W1T 2EW'],
   address: 'Office 2261, 60 Tottenham Court Road, Fitzrovia, London, W1T 2EW',
   phone: '+44 7460 676834',
