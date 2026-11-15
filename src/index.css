@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-snow text-spruce font-sans antialiased; font-size: 16px; line-height: 1.6; }
+  h1, h2, h3 { @apply font-display text-spruce; font-weight: 400; letter-spacing: -0.015em; line-height: 1.12; font-variation-settings: 'opsz' 96; }
+  ::selection { background: rgba(224, 137, 43, 0.28); }
+  :focus-visible { outline: 2px solid #E0892B; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+}
+
+@layer components {
+  .wrap { @apply max-w-site mx-auto px-5 sm:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-[15px] font-semibold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-dark { @apply btn bg-spruce text-snow hover:bg-pine; }
+  .btn-ember { @apply btn bg-ember text-spruce hover:bg-ember-glow; }
+  .btn-line { @apply btn border border-spruce/30 text-spruce hover:border-spruce hover:bg-spruce/[0.04]; }
+  .btn-line-light { @apply btn border border-snow/40 text-snow hover:border-snow hover:bg-snow/10; }
+  .link { @apply underline decoration-ember decoration-2 underline-offset-4 hover:text-pine; }
+  .field { @apply w-full bg-white border border-line px-4 py-3 text-[15px] text-spruce placeholder:text-smoke/70 focus:outline-none focus:border-spruce transition-colors; }
+  .field-label { @apply block text-sm font-semibold text-spruce mb-1.5; }
+  .kicker { @apply text-sm font-semibold text-ember-deep; }
+
+  .legal h2 { @apply text-2xl mt-12 mb-4; }
+  .legal h3 { @apply font-sans font-semibold text-base mt-6 mb-2; letter-spacing: 0; }
+  .legal p { @apply text-smoke leading-7 mb-4 max-w-prose; }
+  .legal ul { @apply list-disc pl-5 space-y-1.5 text-smoke leading-7 mb-4 max-w-prose; }
+  .legal a { @apply link text-spruce; }
+  .legal strong { @apply text-spruce font-semibold; }
+  .legal table { @apply w-full text-sm mb-6 border border-line; }
+  .legal th { @apply text-left bg-frost font-semibold px-3 py-2 border-b border-line; }
+  .legal td { @apply px-3 py-2 border-b border-line text-smoke align-top; }
+}
+
+@keyframes heroIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.hero-in { animation: heroIn 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+@keyframes glow { 0%, 100% { opacity: 0.55; } 50% { opacity: 0.9; } }
+.ember-glow { animation: glow 5s ease-in-out infinite; }
